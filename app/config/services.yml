@@ -1,0 +1,8 @@
+services:
+    app.mailer:
+        class: AppBundle\Mailer\AuthenticationMailer
+        arguments: ["@service_container"]
+
+    app.mailer.worker:
+        class: AppBundle\Worker\WorkerConsumer
+        arguments: ["@service_container"]
